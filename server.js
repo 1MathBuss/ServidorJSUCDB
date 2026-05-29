@@ -4,6 +4,10 @@ require("dotenv").config();
 
 const app = express();
 
+app.get('/', (req, res) => {
+    res.send('A API está online e funcionando!');
+});
+
 app.use(express.json());
 
 const client = new MongoClient(process.env.MONGO_URI);
